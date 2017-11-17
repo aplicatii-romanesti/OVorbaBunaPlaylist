@@ -1,0 +1,159 @@
+########
+#### 1.
+#### Care sunt live sapt in curs, in pagina live: http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14
+## bash shell script:
+#for o_vorba_buna in $(curl -sL http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14 | grep 'http://media.3netmedia.ro/media/RRAOnline/audio/' | cut -d'"' -f8 ) ; do
+#  echo $o_vorba_buna
+#done
+
+########
+#### 2.
+#### Se mai gasesc cateva pe ### web.archive.org
+####1-15 Iunie 2017 https://web.archive.org/web/20170617072704/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14
+####28 Sept - 11 Oct 2016 https://web.archive.org/web/20161013010711/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14
+####21 Iulie-3 Aug 2016 https://web.archive.org/web/20160804225003/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14
+####1-14 Iulie 2016 https://web.archive.org/web/20160716111026/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14
+####25 Mart-7 Apr 2016 https://web.archive.org/web/20160409090509/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14
+## bash shell script:
+#ARCHIVE_LIST="https://web.archive.org/web/20170617072704/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14 https://web.archive.org/web/20161013010711/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14 https://web.archive.org/web/20160804225003/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14 https://web.archive.org/web/20160716111026/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14 https://web.archive.org/web/20160409090509/http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14"
+#for ARCHIVE_sample in ${ARCHIVE_LIST} ; do
+# for o_vorba_buna in $(curl -sL $ARCHIVE_sample | grep 'http://media.3netmedia.ro/media/RRAOnline/audio/' | cut -d'"' -f8 | cut -d'/' -f12 ) ; do 
+#   echo "http://media.3netmedia.ro/media/RRAOnline/audio/${o_vorba_buna}"
+# done
+#done
+
+############
+#### 3. 
+#### incepand cu 1 feb 2014, exista varianta audio a emisiunii. Dar sunt doar cateva audio pe site-ul romania-actualitati:
+## bash shell script:
+#for o_vorba_buna in $(curl -sL http://www.romania-actualitati.ro/o_vorba_buna_arhiva_2009_2013-8037 | grep 'player.php' | cut -d"=" -f3 | cut -d"&" -f1) ; do
+#  echo http://media.3netmedia.ro/media/RRAOnline/audio/${o_vorba_buna}.mp3
+#done
+
+#########################
+#### REZULTATUL FINAL CU 
+#### TOATE LINK-URILE gasite:
+#########################
+
+http://media.3netmedia.ro/media/RRAOnline/audio/127069.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127043.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127024.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/126990.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/126989.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/126941.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/126911.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/126883.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/126858.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/126826.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/126778.mp3
+
+http://media.3netmedia.ro/media/RRAOnline/audio/124270.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/124234.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/124203.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/124148.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/124130.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/124111.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/124080.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/124052.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/123988.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/123975.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118659.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118610.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118590.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118547.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118516.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118476.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118437.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118415.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118386.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/118366.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116614.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116613.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116482.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116462.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116461.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116423.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116389.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116316.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116291.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116277.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116133.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/116079.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/115929.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/115876.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/115839.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/115791.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/115766.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/115715.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/115714.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/115588.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111867.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111825.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111803.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111705.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111677.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111619.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111545.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111497.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111431.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/111390.mp3
+
+http://media.3netmedia.ro/media/RRAOnline/audio/92139.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/92137.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/92138.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/92134.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/89385.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/89383.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/89381.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/89379.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/87854.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/87848.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/87846.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/87842.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/87843.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/83637.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/83636.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/82539.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/82535.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/82534.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/82171.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/82170.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/80905.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/80904.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/80761.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/80759.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/80475.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/80474.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/78571.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/78564.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/76768.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/76767.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/76766.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75994.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75992.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75991.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75988.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75214.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75212.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75210.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75206.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/75204.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/74487.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/74482.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/74478.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/74477.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/74017.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73919.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73918.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73786.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73782.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73640.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73599.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73488.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73441.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73338.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73337.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73168.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73163.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/73161.mp3
+
