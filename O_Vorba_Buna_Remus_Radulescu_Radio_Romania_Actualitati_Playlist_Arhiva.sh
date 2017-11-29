@@ -35,6 +35,14 @@ cat <EOF >>gasite_pana_nov2017.m3u
 #### REZULTATUL FINAL CU 
 #### TOATE LINK-URILE gasite:
 #########################c
+http://media.3netmedia.ro/media/RRAOnline/audio/127338.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127320.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127280.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127223.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127207.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127169.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127129.mp3
+http://media.3netmedia.ro/media/RRAOnline/audio/127113.mp3
 http://media.3netmedia.ro/media/RRAOnline/audio/127069.mp3
 http://media.3netmedia.ro/media/RRAOnline/audio/127043.mp3
 http://media.3netmedia.ro/media/RRAOnline/audio/127024.mp3
