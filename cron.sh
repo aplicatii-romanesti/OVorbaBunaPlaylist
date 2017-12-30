@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 set -v
+date
 cd /tmp/
 PRJ=OVorbaBunaPlaylist
 rm -rf ${PRJ}

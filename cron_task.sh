@@ -27,7 +27,7 @@
 #SERII="12 14" # important e 14!
 
 #set -e
-
+cd archive_cron_html/
 #for SERIE in ${SERII}; do
 for SERIE in {1..25}; do
   curl -sL http://www.romania-actualitati.ro/Podcast/o_vorba_buna/$SERIE | grep mp3 >>cron_${SERIE}_ovb.html
@@ -35,3 +35,4 @@ for SERIE in {1..25}; do
   mv cron_${SERIE}_ovb.html_uniq cron_${SERIE}_ovb.html
   git add cron_${SERIE}_ovb.html
 done
+cd -
