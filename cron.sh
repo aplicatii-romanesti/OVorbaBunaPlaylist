@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 cd /tmp/
 eval $(ssh-agent -s)

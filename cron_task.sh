@@ -1,3 +1,4 @@
+#!/bin/bash
 #http://www.romania-actualitati.ro/Podcast/o_vorba_buna/14
 #1  - Agenda Globală
 #2  - Jurnalul de Prânz (not in use)
