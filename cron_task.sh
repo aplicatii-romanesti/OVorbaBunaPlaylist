@@ -30,9 +30,12 @@
 cd archive_cron_html/
 #for SERIE in ${SERII}; do
 for SERIE in {1..25}; do
+  echo "`date` start working on $SERIE (http://www.romania-actualitati.ro/Podcast/o_vorba_buna/$SERIE )"
   curl -sL http://www.romania-actualitati.ro/Podcast/o_vorba_buna/$SERIE | grep mp3 >>cron_${SERIE}_ovb.html
+  echo "curl ended with $?"
   sort cron_${SERIE}_ovb.html | uniq > cron_${SERIE}_ovb.html_uniq
   mv cron_${SERIE}_ovb.html_uniq cron_${SERIE}_ovb.html
   git add cron_${SERIE}_ovb.html
+  echo "`date` $SERIE - done"
 done
 cd -
