@@ -16,13 +16,16 @@ rm -rf ${PRJ}
 \git clone git@github.com:aplicatii-romanesti/${PRJ}.git
 cd ${PRJ}
 
-date >> last_run_date.log
+echo "start: $(date) " >> last_run_date.log
 
 chmod +x ./cron_task.sh
-echo "demo ./cron_task.sh"
+./cron_task.sh
+
+echo "finish: $(date) " >> last_run_date.log
 \git add .
 
-\git commit -m"`date`" --author "aplicatii-romanesti"
+\git commit -m"`date`"
+# --author "aplicatii-romanesti"
 \git push
 \mv ~/.gitconfig.cron ~/.gitconfig
 
