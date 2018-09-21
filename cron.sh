@@ -16,6 +16,8 @@ rm -rf ${PRJ}
 \git clone git@github.com:aplicatii-romanesti/${PRJ}.git
 cd ${PRJ}
 
+date >> last_run_date.log
+
 chmod +x ./cron_task.sh
 echo "demo ./cron_task.sh"
 \git add .
