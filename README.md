@@ -11,5 +11,5 @@ Sunt corecte: 6 dec 2017 -> 22 Feb 2018  si 10 Sept 2018 -> la zi.
 ```
 >Ediţia din 22 februarie 2018</a><a alt="Download" href="http://media.3netmedia.ro/media/RRAOnline/audio/128992.mp3"
 <LIPSA>
->Ediţia din 22 februarie 2018</a><a alt="Download" href="http://media.3netmedia.ro/media/RRAOnline/audio/128992.mp3"
+">Ediţia din 10 septembrie 2018</a><a alt="Download" href="http://media.3netmedia.ro/media/RRAOnline/audio/133205.mp3"
 ```
