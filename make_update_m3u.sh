@@ -1,0 +1,5 @@
+grep 'http://media.3netmedia.ro/media/RRAOnline/audio/' archive_cron_html/cron_14_ovb.html | cut -d'"' -f8 > O_Vorba_Buna_Remus_Radulescu_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
+uniq O_Vorba_Buna_Remus_Radulescu_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp > O_Vorba_Buna_Remus_Radulescu_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp.tmp
+tac O_Vorba_Buna_Remus_Radulescu_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp.tmp > O_Vorba_Buna_Remus_Radulescu_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
+echo "# OLDER from archive.org" >> O_Vorba_Buna_Remus_Radulescu_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
+grep '^http://media.3netmedia.ro/media/RRAOnline/audio/' O_Vorba_Buna_Remus_Radulescu_Radio_Romania_Actualitati_Playlist_Arhiva_recovered_archive_org.m3u >> O_Vorba_Buna_Remus_Radulescu_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
