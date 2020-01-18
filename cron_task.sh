@@ -39,3 +39,7 @@ for SERIE in {1..25}; do
   echo "`date` $SERIE - done"
 done
 cd -
+
+./make_update_m3u.sh
+
+
