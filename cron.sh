@@ -27,5 +27,6 @@ echo "finish: $(date) " >> last_run_date.log
 \git commit -m"`date`"
 # --author "aplicatii-romanesti"
 \git push
-\mv ~/.gitconfig.cron ~/.gitconfig
+#\mv ~/.gitconfig.cron ~/.gitconfig
+echo "finished at: `date`"
 
