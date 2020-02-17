@@ -11,7 +11,7 @@ grep '^http://media.3netmedia.ro/media/RRAOnline/audio/' ${SET}_Radio_Romania_Ac
 echo "# OLDER manual recovered" >> ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 grep '^http://media.3netmedia.ro/media/RRAOnline/audio/' ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_recovered_manual.m3u >> ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 # Add silence
-cat ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u | awk ' {print;} { print "https://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/silence7s.mp3"; }' > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
+cat ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u | sort -n | uniq | awk ' {print;} { print "https://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/silence7s.mp3"; }' > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
 mv ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 
 ############
@@ -25,6 +25,6 @@ echo "# OLDER from archive.org - TODO" >> ${SET}_Radio_Romania_Actualitati_Playl
 echo "# OLDER manual recovered" >> ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 grep '^http://media.3netmedia.ro/media/RRAOnline/audio/' ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_recovered_manual.m3u >> ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 # Add Silence
-cat ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u | awk ' {print;} { print "https://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/silence7s.mp3"; }' > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
+cat ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u | sort -n | uniq | awk ' {print;} { print "https://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/silence7s.mp3"; }' > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
 mv ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 
