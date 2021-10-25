@@ -3,6 +3,7 @@
 ###########
 SET=O_Vorba_Buna_Remus_Radulescu
 CAT=14
+CAT_NEW='o-vorba-buna/-s_1-sh_5361'
 ### OLD_NO_LONGER_NEEDED_TO_UPDATE
 cat <<EOF >/dev/null
 grep 'http://media.3netmedia.ro/media/RRAOnline/audio/' archive_cron_html/cron_${CAT}_ovb.html | cut -d'"' -f8 > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
@@ -19,14 +20,17 @@ grep -v silence ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u >${SET}
 mv -f ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.nosilence  ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 
 ## Add 2021 style:
-curl -sL https://podcast.srr.ro/RRA/o-vorba-buna/-s_1-sh_5361 | grep mp3 | grep audio | grep -i vorba | cut -d'=' -f2 | cut -d'"' -f2 | sed 's!.*!https://podcast.srr.ro\0!' >>  ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
+curl -sL https://podcast.srr.ro/RRA/${CAT_NEW} | grep mp3 | grep audio | grep -i vorba | cut -d'=' -f2 | cut -d'"' -f2 | sed 's!.*!http://podcast.srr.ro\0!' >>  ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 # Add silence
-cat ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u | sort -n | uniq | awk ' {print;} { print "https://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/silence7s.mp3"; }' > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
+cat ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u | sort -n | uniq | awk ' {print;} { print "http://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/silence7s.mp3"; }' > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
 mv ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
+
+perl -p -i -e 's!https://!http://!g' ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 
 ############
 SET=O_150_Cuvinte
 CAT=12
+CAT_NEW='150-de-cuvinte/-s_1-sh_6231'
 ### OLD_NO_LONGER_NEEDED_TO_UPDATE
 cat <<EOF >/dev/null
 grep 'http://media.3netmedia.ro/media/RRAOnline/audio/' archive_cron_html/cron_${CAT}_ovb.html | cut -d'"' -f8 > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
@@ -43,8 +47,9 @@ grep -v silence ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u >${SET}
 mv -f ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.nosilence  ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 
 ## Add 2021 style:
-curl -sL https://podcast.srr.ro/RRA/150-de-cuvinte/-s_1-sh_6231 | grep mp3 | grep audio | grep -i cuvinte | cut -d'=' -f2 | cut -d'"' -f2 | sed 's!.*!https://podcast.srr.ro\0!' >>  ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
+curl -sL https://podcast.srr.ro/RRA/${CAT_NEW} | grep mp3 | grep audio | grep -i cuvinte | cut -d'=' -f2 | cut -d'"' -f2 | sed 's!.*!http://podcast.srr.ro\0!' >>  ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 # Add Silence
-cat ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u | sort -n | uniq | awk ' {print;} { print "https://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/silence7s.mp3"; }' > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
+cat ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u | sort -n | uniq | awk ' {print;} { print "http://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/silence7s.mp3"; }' > ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp
 mv ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u.tmp ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 
+perl -p -i -e 's!https://!http://!g' ${SET}_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u

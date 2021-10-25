@@ -45,7 +45,7 @@ cp -f ~aplicatii-romanesti/_ovb/local.* . || true
 
 for local in local.*.sh; do
   chmod +x ./${local} > ${local}.log 2>&1 || true
-  ./${local} > ${local}.log 2>&1 || true
+  ./${local} >> ${local}.log 2>&1 || true
 done
 
 
