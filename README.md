@@ -35,5 +35,18 @@ Tot aici, mai puteti gasi si o parte din emisiunile "150 Cuvinte"
 
 Playlist-ul: https://raw.githubusercontent.com/aplicatii-romanesti/OVorbaBunaPlaylist/master/O_150_Cuvinte_Radio_Romania_Actualitati_Playlist_Arhiva_all.m3u
 
+
+
+## Cuvantul care zideste
+Emisiune Radio Trinitas Pr. Narcis Stupcanu (https://www.radiotrinitas.ro/toate/cuvantul-care-zideste/)
+https://soundcloud.com/radio-trinitas/sets/cuvantul-care-zideste
+https://soundcloud.com/radio-trinitas/sets/cuv-ntul-care-zide-te-2023
+https://soundcloud.com/radio-trinitas/sets/cuv-ntul-care-zide-te-2022
+https://soundcloud.com/radio-trinitas/sets/cuv-ntul-care-zide-te-2021
+https://soundcloud.com/radio-trinitas/sets/cuv-ntul-care-zide-te-2020
+https://soundcloud.com/radio-trinitas/sets/cuv-ntul-care-zide-te-2019
+https://soundcloud.com/radio-trinitas/sets/cuv-ntul-care-zide-te-2018-1
+
+
 ## Pentru mai multe informatii, ne puteti contacta pe email!
 
